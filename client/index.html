@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Keyboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        .flex{
+            display: flex;
+            align-content: space-evenly;
+            max-width: 30%;
+            padding: 10px;
+            min-height: 200px;
+            flex-direction: column;
+        }
+        .flex > input {
+            margin:20px; 
+            height: 50px; 
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex">
+        <h1>Send test request:</h1>
+
+        <input type="text" id="server_url" placeholder="server URL"/>
+        <input type="text" id="msg_to_send" placeholder="message to send"/>
+        <input type="button" id="send_btn" value="Submit">
+    </div>
+
+    <div id="output"></div>
+    <script>
+        function logMsg(msg) {
+            $("#output").append($("<p></p>").text(String(msg)))
+        }
+    
+        $( document ).ready(function() {
+            $( "#send_btn" ).click(function() {
+
+                logMsg( "Handler for .click() called." );
+
+                sendWS_msg(
+                    $("#server_url")[0].value,
+                    $("#msg_to_send")[0].value,
+                    logMsg
+                )
+            })
+        });
+
+        function sendWS_msg(url, message, out_handler) { 
+            // send websocket message and produce output
+            let socket = new WebSocket(url);
+
+            socket.onopen = function(e) {
+                logMsg("Sending to server");
+                socket.send(message);
+            };
+
+            socket.onmessage = function(event) {
+                out_handler(event.data)
+            };
+
+            socket.onclose = function(event) {
+            if (event.wasClean) {
+                logMsg(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+            } else {
+                logMsg('[close] Connection died');
+            }
+            };
+
+            socket.onerror = function(error) {
+                logMsg(`[error]`);
+            };
+        }
+    </script>
+</body>
+</html>
