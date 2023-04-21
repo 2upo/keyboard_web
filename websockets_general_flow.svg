@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09, custom)"
-   sodipodi:docname="websockets_general_flow"
+   sodipodi:docname="websockets_general_flow.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,9 +24,9 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="2"
-     inkscape:cx="426.25"
-     inkscape:cy="325.75"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="325.62267"
+     inkscape:cy="619.07199"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -175,6 +175,86 @@
          transform="rotate(180,0.125,0)"
          sodipodi:nodetypes="ccc" />
     </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1-3-2-0"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-58-0-9"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1-5-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-5-7"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1-5-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-5-8"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1-5-60"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1"
+       markerWidth="4.0606604"
+       markerHeight="6.7071066"
+       viewBox="0 0 4.0606602 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1;stroke-linecap:butt"
+         d="M 3,-3 0,0 3,3"
+         id="path5057-5-1"
+         transform="rotate(180,0.125,0)"
+         sodipodi:nodetypes="ccc" />
+    </marker>
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -288,17 +368,17 @@
        xml:space="preserve"
        style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
        x="158.33963"
-       y="55.249187"
+       y="55.778355"
        id="text773-2"><tspan
          sodipodi:role="line"
          id="tspan771-0"
          style="stroke-width:0.264583"
          x="158.33963"
-         y="55.249187">ALL KEYS UP</tspan><tspan
+         y="55.778355">ALL KEYS UP</tspan><tspan
          sodipodi:role="line"
          style="stroke-width:0.264583"
          x="158.33963"
-         y="59.217937"
+         y="59.747105"
          id="tspan3540">clear all keys</tspan></text>
     <text
        xml:space="preserve"
@@ -362,9 +442,37 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.246085px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1-3-2-0)"
+       d="m 100.90847,88.027368 -13.084795,0.0093"
+       id="path824-2-8-5"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.246085px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1-5)"
        d="m 93.554557,55.552577 3.469213,0.0093"
        id="path824-1"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.246085px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1-5-6)"
+       d="m 46.042493,101.34761 3.469213,0.009"
+       id="path824-1-3"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.246085px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1-5-3)"
+       d="m 90.382508,101.34761 3.469213,0.009"
+       id="path824-1-8"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.246085px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1-5-60)"
+       d="m 139.52264,101.34761 3.46921,0.009"
+       id="path824-1-80"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -382,5 +490,155 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+       x="86.411354"
+       y="82.30764"
+       id="text5561"><tspan
+         sodipodi:role="line"
+         id="tspan5559"
+         style="stroke-width:0.264583"
+         x="86.411354"
+         y="82.30764" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.264583"
+       x="16.655277"
+       y="170.80505"
+       id="text5565"><tspan
+         sodipodi:role="line"
+         id="tspan5563"
+         style="stroke-width:0.264583"
+         x="16.655277"
+         y="170.80505">Protocol:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="10.309574"
+       y="178.8699"
+       id="text5569"><tspan
+         sodipodi:role="line"
+         id="tspan5567"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="10.309574"
+         y="178.8699">Every message is received and sent as a <tspan
+   style="font-weight:bold"
+   id="tspan5571">string</tspan>.</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="10.309574"
+         y="182.83865"
+         id="tspan5575">Every message is formated as JSON which contains certain fiels:</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="10.309574"
+         y="186.8074"
+         id="tspan5579">1. &quot;data&quot;: formatted embedded JSON. Nullable.</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:start;text-anchor:start;stroke-width:0.264583"
+         x="10.309574"
+         y="190.77615"
+         id="tspan6407">2. &quot;errors&quot;: error messages from client or API. Nullable.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="29.895994"
+       y="185.54765"
+       id="text6405"><tspan
+         sodipodi:role="line"
+         id="tspan6403"
+         style="stroke-width:0.264583"
+         x="29.895994"
+         y="185.54765" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="14.324399"
+       y="200.53519"
+       id="text8055"><tspan
+         sodipodi:role="line"
+         id="tspan8053"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="200.53519">Event Type 0: Key is pressed <tspan
+   style="font-weight:bold"
+   id="tspan8057">short_</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="204.50394"
+         id="tspan8059">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 0}, &quot;errors&quot;: null}</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="208.47269"
+         id="tspan8061" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="212.44144"
+         id="tspan8063">Event Type 1: Key is pressed <tspan
+   style="font-weight:bold"
+   id="tspan9752">long_</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="216.41019"
+         id="tspan8065">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 1}, &quot;errors&quot;: null}</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="14.116874"
+       y="102.23099"
+       id="text8069"><tspan
+         sodipodi:role="line"
+         id="tspan8067"
+         style="stroke-width:0.264583"
+         x="14.116874"
+         y="102.23099">press key shortly</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="71.207626"
+       y="100.77579"
+       id="text8069-7"><tspan
+         sodipodi:role="line"
+         id="tspan8067-4"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="71.207626"
+         y="100.77579">detect short press</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="71.207626"
+         y="104.74454"
+         id="tspan8926">send EventType0</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="117.80145"
+       y="102.18681"
+       id="text8069-7-6"><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="117.80145"
+         y="102.18681"
+         id="tspan8926-9">kd.press_and_release(key)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="159.33672"
+       y="100.77579"
+       id="text8069-7-6-7"><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="159.33672"
+         y="100.77579"
+         id="tspan8926-9-1">Key tapped 1 time</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="159.33672"
+         y="104.74454"
+         id="tspan9002">shortly</tspan></text>
   </g>
 </svg>
