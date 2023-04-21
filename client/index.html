@@ -10,9 +10,10 @@
         .flex{
             display: flex;
             align-content: space-evenly;
-            max-width: 30%;
+            min-width: 500px;
             padding: 10px;
             min-height: 200px;
+            width: 30%;
             flex-direction: column;
         }
         .flex > input {
@@ -20,6 +21,86 @@
             height: 50px; 
             font-size: larger;
         }
+
+        .keyboard {
+            display: inline-block;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            user-select: none;
+            width: 100%;
+            display: flex;
+            min-width: 865px;
+        }
+
+
+        .row {
+            margin-bottom: 5px;
+        }
+
+        .key {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 32px;
+            cursor: default;
+            background-color: #f5f5f5;
+        }
+
+        .key:hover {
+            background-color: #e5e5e5;
+        }
+
+        #backspace {
+            width: 120px;
+        }
+        .num-block{
+            margin-left: 10px;
+        }
+
+        #caps-lock {
+            width: 80px;
+        }
+
+        #enter {
+            width: 80px;
+        }
+
+        #left-shift, #right-shift {
+            width: 90px;
+        }
+
+        #spacebar {
+            width: 224px;
+        }
+
+        #num-lock {
+            width: 80px;
+        }
+
+        #num-divide, #num-multiply, #num-subtract, #num-add {
+            width: 32px;
+        }
+
+        #num-enter {
+            width: 114px;
+        }
+
+        #num-0 {
+            width: 144px;
+        }
+
+        #num-decimal {
+            width: 80px;
+        }
+
+        #left-ctrl, #left-win, #left-alt, #right-alt, #right-win{
+            width: 60px;
+        }
+
     </style>
 </head>
 <body>
@@ -55,7 +136,7 @@
             let socket = new WebSocket(url);
 
             socket.onopen = function(e) {
-                logMsg("Sending to server");
+                logMsg("Send ping");
                 socket.send(message);
             };
 
@@ -76,5 +157,110 @@
             };
         }
     </script>
+
+<div class="keyboard">
+    <div class="main-block">
+        <div class="row">
+            <div class="key" id="backtick">`</div>
+            <div class="key" id="1">1</div>
+            <div class="key" id="2">2</div>
+            <div class="key" id="3">3</div>
+            <div class="key" id="4">4</div>
+            <div class="key" id="5">5</div>
+            <div class="key" id="6">6</div>
+            <div class="key" id="7">7</div>
+            <div class="key" id="8">8</div>
+            <div class="key" id="9">9</div>
+            <div class="key" id="0">0</div>
+            <div class="key" id="minus">-</div>
+            <div class="key" id="equals">=</div>
+            <div class="key" id="backspace">Backspace</div>
+          </div>
+          <div class="row">
+            <div class="key" id="tab">Tab</div>
+            <div class="key" id="q">Q</div>
+            <div class="key" id="w">W</div>
+            <div class="key" id="e">E</div>
+            <div class="key" id="r">R</div>
+            <div class="key" id="t">T</div>
+            <div class="key" id="y">Y</div>
+            <div class="key" id="u">U</div>
+            <div class="key" id="i">I</div>
+            <div class="key" id="o">O</div>
+            <div class="key" id="p">P</div>
+            <div class="key" id="left-brace">[</div>
+            <div class="key" id="right-brace">]</div>
+            <div class="key" id="backslash">\\</div>
+          </div>
+          <div class="row">
+            <div class="key" id="caps-lock">Caps Lock</div>
+            <div class="key" id="a">A</div>
+            <div class="key" id="s">S</div>
+            <div class="key" id="d">D</div>
+            <div class="key" id="f">F</div>
+            <div class="key" id="g">G</div>
+            <div class="key" id="h">H</div>
+            <div class="key" id="j">J</div>
+            <div class="key" id="k">K</div>
+            <div class="key" id="l">L</div>
+            <div class="key" id="semicolon">;</div>
+            <div class="key" id="apostrophe">'</div>
+            <div class="key" id="enter">Enter</div>
+          </div>
+          <div class="row">
+            <div class="key" id="left-shift">Shift</div>
+            <div class="key" id="z">Z</div>
+            <div class="key" id="x">X</div>
+            <div class="key" id="c">C</div>
+            <div class="key" id="v">V</div>
+            <div class="key" id="b">B</div>
+            <div class="key" id="n">N</div>
+            <div class="key" id="m">M</div>
+            <div class="key" id="comma">,</div>
+            <div class="key" id="period">.</div>
+            <div class="key" id="slash">/</div>
+            <div class="key" id="right-shift">Shift</div>
+          </div>
+          <div class="row">
+            <div class="key" id="left-ctrl">Ctrl</div>
+            <div class="key" id="left-win">Win</div>
+            <div class="key" id="left-alt">Alt</div>
+            <div class="key" id="spacebar">Space</div>
+            <div class="key" id="right-alt">Alt</div>
+            <div class="key" id="right-win">Win</div>
+          </div>
+    </div>
+    
+    <div class="num-block">
+        <div class="row">
+            <div class="key">Num  </div>
+            <div class="key" id="num-divide">&#247;</div>
+            <div class="key" id="num-multiply">&#215;</div>
+            <div class="key" id="num-subtract">&#8722;</div>
+          </div>
+          <div class="row">
+            <div class="key" id="num-7">7</div>
+            <div class="key" id="num-8">8</div>
+            <div class="key" id="num-9">9</div>
+            <div class="key" id="num-add">&#43;</div>
+          </div>
+          <div class="row">
+            <div class="key" id="num-4">4</div>
+            <div class="key" id="num-5">5</div>
+            <div class="key" id="num-6">6</div>
+          </div>
+          <div class="row">
+            <div class="key" id="num-1">1</div>
+            <div class="key" id="num-2">2</div>
+            <div class="key" id="num-3">3</div>
+            <div class="key" id="num-enter">Enter</div>
+          </div>
+          <div class="row">
+            <div class="key" id="num-0">0</div>
+            <div class="key" id="num-decimal">.</div>
+          </div>
+    </div>
+  </div>
+  
 </body>
 </html>
