@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.4142136"
-     inkscape:cx="325.62267"
-     inkscape:cy="619.07199"
+     inkscape:cx="323.8549"
+     inkscape:cy="474.11508"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -35,6 +35,18 @@
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <rect
+       x="1048.8591"
+       y="1708.2679"
+       width="14"
+       height="14"
+       id="rect22522" />
+    <rect
+       x="1091.7368"
+       y="1700.5896"
+       width="1737.5464"
+       height="796.056"
+       id="rect22450" />
     <marker
        style="overflow:visible"
        id="Arrow1"
@@ -585,7 +597,24 @@
          style="stroke-width:0.264583"
          x="14.324399"
          y="216.41019"
-         id="tspan8065">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 1}, &quot;errors&quot;: null}</tspan></text>
+         id="tspan8065">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 1}, &quot;errors&quot;: null}</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="220.37894"
+         id="tspan1196" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="224.34769"
+         id="tspan1198">Event Type 2: Key is <tspan
+   style="font-weight:bold"
+   id="tspan2062">released</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="228.31644"
+         id="tspan1200">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 2}, &quot;errors&quot;: null}</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
@@ -640,5 +669,67 @@
          x="159.33672"
          y="104.74454"
          id="tspan9002">shortly</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264583"
+       x="14.324399"
+       y="200.53519"
+       id="text6376"><tspan
+         sodipodi:role="line"
+         id="tspan6356"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="200.53519">Event Type 0: Key is pressed <tspan
+   style="font-weight:bold"
+   id="tspan6354">short_</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="204.50394"
+         id="tspan6358">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 0}, &quot;errors&quot;: null}</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="208.47269"
+         id="tspan6360" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="212.44144"
+         id="tspan6364">Event Type 1: Key is pressed <tspan
+   style="font-weight:bold"
+   id="tspan6362">long_</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="216.41019"
+         id="tspan6366">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 1}, &quot;errors&quot;: null}</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="220.37894"
+         id="tspan6368" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="224.34769"
+         id="tspan6372">Event Type 2: Key is <tspan
+   style="font-weight:bold"
+   id="tspan6370">released</tspan></tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="14.324399"
+         y="228.31644"
+         id="tspan6374">{&quot;data&quot;: {&quot;key&quot;, &quot;event&quot;: 2}, &quot;errors&quot;: null}</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text22448"
+       style="fill:#000000;text-align:center;white-space:pre;shape-inside:url(#rect22450)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text22520"
+       style="fill:#000000;text-align:center;white-space:pre;shape-inside:url(#rect22522)" />
   </g>
 </svg>

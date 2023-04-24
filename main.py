@@ -16,14 +16,20 @@ async def handler(websocket):
     async for message in websocket:
         d = json.loads(message)
         print(d)
-        if d.get('message'):
+        if d.get('data') == "ping":
             await websocket.send('pong')
         else:
             key = d['data']['key']
+            event_type = d['data']['event']
             if key in ex:
                 key = ex.get(key)
             try:
-                keyboard.press_and_release(key)
+                if event_type == 0:
+                    keyboard.press_and_release(key)
+                elif event_type == 1:
+                    keyboard.press(key)
+                elif event_type == 2:
+                    keyboard.release(key)
             except:
                 print(key)
 

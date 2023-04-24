@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Keyboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        input {
+            margin:5px; 
+            height: 20px;
+            display: inline-block;
+        }
+
+        .keyboard {
+            display: inline-block;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            user-select: none;
+            display: flex;
+            min-width: 590px;
+            max-width: 590px;
+        }
+
+
+        .row {
+            margin-bottom: 5px;
+        }
+
+        .key {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 32px;
+            cursor: default;
+            background-color: #f5f5f5;
+        }
+
+        .key:hover {
+            background-color: #e5e5e5;
+        }
+
+        #backspace {
+            width: 92px;
+        }
+        .num-block{
+            margin-left: 10px;
+        }
+
+        #caps-lock {
+            width: 45px;
+        }
+
+        #enter {
+            width: 80px;
+        }
+
+        #left-shift {
+            width: 60px;
+        }
+        #right-shift{
+            width: 104px;
+        }
+
+        #spacebar {
+            width: 224px;
+        }
+
+        #num-lock {
+            width: 80px;
+        }
+
+        #num-divide, #num-multiply, #num-subtract, #num-add {
+            width: 32px;
+        }
+
+        #num-enter {
+            width: 114px;
+        }
+
+        #num-0 {
+            width: 144px;
+        }
+
+        #num-decimal {
+            width: 80px;
+        }
+
+        #left-ctrl, #left-win, #left-alt, #right-alt, #right-win{
+            width: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Remote Keyboard</h3>
+        Please, enter server url: 
+
+        <input type="text" style="display: inline-block;" value="wss://javascript.info/article/websocket/demo/hello" id="server_url" placeholder="server URL"/> 
+        <input type="button" style="display: inline-block;" id="send_btn" value="Connect"> 
+    <div class="keyboard">
+        <div class="main-block">
+            <div class="row">
+                <div class="key" id="backtick">`</div>
+                <div class="key" id="1">1</div>
+                <div class="key" id="2">2</div>
+                <div class="key" id="3">3</div>
+                <div class="key" id="4">4</div>
+                <div class="key" id="5">5</div>
+                <div class="key" id="6">6</div>
+                <div class="key" id="7">7</div>
+                <div class="key" id="8">8</div>
+                <div class="key" id="9">9</div>
+                <div class="key" id="0">0</div>
+                <div class="key" id="minus">-</div>
+                <div class="key" id="equals">=</div>
+                <div class="key" id="backspace">Backspace</div>
+              </div>
+              <div class="row">
+                <div class="key" id="tab">Tab</div>
+                <div class="key" id="q">Q</div>
+                <div class="key" id="w">W</div>
+                <div class="key" id="e">E</div>
+                <div class="key" id="r">R</div>
+                <div class="key" id="t">T</div>
+                <div class="key" id="y">Y</div>
+                <div class="key" id="u">U</div>
+                <div class="key" id="i">I</div>
+                <div class="key" id="o">O</div>
+                <div class="key" id="p">P</div>
+                <div class="key" id="left-brace">[</div>
+                <div class="key" id="right-brace">]</div>
+                <div class="key" id="backslash">\\</div>
+              </div>
+              <div class="row">
+                <div class="key" id="caps-lock">Caps</div>
+                <div class="key" id="a">A</div>
+                <div class="key" id="s">S</div>
+                <div class="key" id="d">D</div>
+                <div class="key" id="f">F</div>
+                <div class="key" id="g">G</div>
+                <div class="key" id="h">H</div>
+                <div class="key" id="j">J</div>
+                <div class="key" id="k">K</div>
+                <div class="key" id="l">L</div>
+                <div class="key" id="semicolon">;</div>
+                <div class="key" id="apostrophe">'</div>
+                <div class="key" id="enter">Enter</div>
+              </div>
+              <div class="row">
+                <div class="key" id="left-shift">Shift</div>
+                <div class="key" id="z">Z</div>
+                <div class="key" id="x">X</div>
+                <div class="key" id="c">C</div>
+                <div class="key" id="v">V</div>
+                <div class="key" id="b">B</div>
+                <div class="key" id="n">N</div>
+                <div class="key" id="m">M</div>
+                <div class="key" id="comma">,</div>
+                <div class="key" id="period">.</div>
+                <div class="key" id="slash">/</div>
+                <div class="key" id="right-shift">Shift</div>
+              </div>
+              <div class="row">
+                <div class="key" id="left-ctrl">Ctrl</div>
+                <div class="key" id="left-win">Win</div>
+                <div class="key" id="left-alt">Alt</div>
+                <div class="key" id="spacebar">Space</div>
+                <div class="key" id="right-alt">Alt</div>
+                <div class="key" id="right-win">Win</div>
+              </div>
+        </div>
+    </div>
+      
+      
+    <div id="output"></div>
+    <script>
+        // Init websocket pointer
+        $.custom_socket = null
+
+        // Debug function to log messages from server.
+        function logMsg(msg) {
+            $("#output").append($("<p></p>").text(String(msg)))
+        }
+    
+        // On document init
+        $( document ).ready(function() {
+            // $(".key").click(function(e){
+            //     WS_sendKey(e.delegateTarget.textContent)
+            // })
+            is_touch_device = false
+            $(".key").on('touchstart', function(event) {
+                is_touch_device = true
+                WS_sendKey(event.delegateTarget.textContent, 1)
+            });
+            $(".key").on('touchend', function(event) {
+                is_touch_device = true
+                WS_sendKey(event.delegateTarget.textContent, 2)
+            });
+            
+            $(".key").on('mousedown', function(event) {
+                if (!is_touch_device){
+                    WS_sendKey(event.delegateTarget.textContent, 1)
+                }
+            });
+            $(".key").on('mouseup', function(event) {
+                if (!is_touch_device){
+                    WS_sendKey(event.delegateTarget.textContent, 2)
+                }
+            });
+
+            $( "#send_btn" ).click(function() {
+                WS_connect(
+                    $("#server_url")[0].value,
+                    logMsg
+                )
+            })
+        });
+
+        function WS_connect(url, out_handler) { 
+            // send websocket message and produce output
+            if ($.custom_socket === null) {
+                logMsg("Init Socket")
+                $.custom_socket = new WebSocket(url);
+            }
+
+            $.custom_socket.onopen = function(e) {
+                logMsg("Send ping");
+                $.custom_socket.send('{"data": "ping", "errors": null}');
+            };
+
+            $.custom_socket.onmessage = function(event) {
+                out_handler(event.data)
+            };
+
+            $.custom_socket.onclose = function(event) {
+                if (event.wasClean) {
+                    logMsg(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+                } else {
+                    logMsg('[close] Connection died');
+                }
+            };
+
+            $.custom_socket.onerror = function(error) {
+                logMsg("Ошибочка вышла...");
+                console.log(error)
+            };
+        }
+
+        function WS_sendKey(key, eventType) {
+            $.custom_socket.send(`{"data": {"key": "${key}", "event": ${eventType}}, "errors": null}`)
+            logMsg("Sent key: "+ `key: ${key}, event: ${eventType}`)
+        }
+    </script>
+
+
+  
+</body>
+</html>
