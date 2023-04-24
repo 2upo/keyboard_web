@@ -264,7 +264,8 @@
             };
 
             $.custom_socket.onerror = function(error) {
-                logMsg(`[error]`);
+                logMsg(error);
+                console.log(error)
             };
         }
 
