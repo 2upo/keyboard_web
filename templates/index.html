@@ -7,19 +7,10 @@
     <title>Remote Keyboard</title>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <style>
-        .flex{
-            display: flex;
-            align-content: space-evenly;
-            min-width: 500px;
-            padding: 10px;
-            min-height: 200px;
-            width: 30%;
-            flex-direction: column;
-        }
-        .flex > input {
-            margin:20px; 
-            height: 50px; 
-            font-size: larger;
+        input {
+            margin:5px; 
+            height: 20px;
+            display: inline-block;
         }
 
         .keyboard {
@@ -29,9 +20,9 @@
             font-size: 14px;
             font-family: Arial, sans-serif;
             user-select: none;
-            width: 100%;
             display: flex;
-            min-width: 865px;
+            min-width: 590px;
+            max-width: 590px;
         }
 
 
@@ -55,22 +46,25 @@
         }
 
         #backspace {
-            width: 120px;
+            width: 92px;
         }
         .num-block{
             margin-left: 10px;
         }
 
         #caps-lock {
-            width: 80px;
+            width: 45px;
         }
 
         #enter {
             width: 80px;
         }
 
-        #left-shift, #right-shift {
-            width: 90px;
+        #left-shift {
+            width: 60px;
+        }
+        #right-shift{
+            width: 104px;
         }
 
         #spacebar {
@@ -104,13 +98,11 @@
     </style>
 </head>
 <body>
-    <div class="flex">
-        <h1>Send test request:</h1>
+    <h3>Remote Keyboard</h3>
+        Please, enter server url: 
 
-        <input type="text" id="server_url" placeholder="server URL"/>
-        <input type="text" id="msg_to_send" placeholder="message to send"/>
-        <input type="button" id="send_btn" value="Submit">
-    </div>
+        <input type="text" style="display: inline-block;" value="wss://javascript.info/article/websocket/demo/hello" id="server_url" placeholder="server URL"/> 
+        <input type="button" style="display: inline-block;" id="send_btn" value="Connect"> 
     <div class="keyboard">
         <div class="main-block">
             <div class="row">
@@ -146,7 +138,7 @@
                 <div class="key" id="backslash">\\</div>
               </div>
               <div class="row">
-                <div class="key" id="caps-lock">Caps Lock</div>
+                <div class="key" id="caps-lock">Caps</div>
                 <div class="key" id="a">A</div>
                 <div class="key" id="s">S</div>
                 <div class="key" id="d">D</div>
@@ -183,37 +175,54 @@
                 <div class="key" id="right-win">Win</div>
               </div>
         </div>
-        
-        <div class="num-block">
+    </div>
+
+    <div class="keyboard">
+        <div class="main-block">
             <div class="row">
-                <div class="key">Num  </div>
-                <div class="key" id="num-divide">&#247;</div>
-                <div class="key" id="num-multiply">&#215;</div>
-                <div class="key" id="num-subtract">&#8722;</div>
+                <div class="key" id="backtick">`</div>
+                <div class="key" id="1">1</div>
+                <div class="key" id="2">2</div>
+                <div class="key" id="3">3</div>
+                <div class="key" id="4">4</div>
+                <div class="key" id="5">5</div>
+                <div class="key" id="0">0</div>
+                <div class="key" id="backspace">Backspace</div>
               </div>
               <div class="row">
-                <div class="key" id="num-7">7</div>
-                <div class="key" id="num-8">8</div>
-                <div class="key" id="num-9">9</div>
-                <div class="key" id="num-add">&#43;</div>
+                <div class="key" id="tab">Tab</div>
+                <div class="key" id="q">Q</div>
+                <div class="key" id="w">W</div>
+                <div class="key" id="e">E</div>
+                <div class="key" id="r">R</div>
+                <div class="key" id="t">T</div>
+                <div class="key" id="i">I</div>
               </div>
               <div class="row">
-                <div class="key" id="num-4">4</div>
-                <div class="key" id="num-5">5</div>
-                <div class="key" id="num-6">6</div>
+                <div class="key" id="caps-lock">Caps</div>
+                <div class="key" id="a">A</div>
+                <div class="key" id="s">S</div>
+                <div class="key" id="d">D</div>
+                <div class="key" id="f">F</div>
+                <div class="key" id="l">L</div>
+                <div class="key" id="enter">Enter</div>
               </div>
               <div class="row">
-                <div class="key" id="num-1">1</div>
-                <div class="key" id="num-2">2</div>
-                <div class="key" id="num-3">3</div>
-                <div class="key" id="num-enter">Enter</div>
+                <div class="key" id="left-shift">Shift</div>
+                <div class="key" id="z">Z</div>
+                <div class="key" id="x">X</div>
+                <div class="key" id="c">C</div>
+                <div class="key" id="v">V</div>
+                <div class="key" id="m">M</div>
               </div>
               <div class="row">
-                <div class="key" id="num-0">0</div>
-                <div class="key" id="num-decimal">.</div>
+                <div class="key" id="left-ctrl">Ctrl</div>
+                <div class="key" id="left-win">Win</div>
+                <div class="key" id="left-alt">Alt</div>
+                <div class="key" id="spacebar">Space</div>
               </div>
         </div>
-      </div>
+    </div>
       
       
     <div id="output"></div>
@@ -228,9 +237,30 @@
     
         // On document init
         $( document ).ready(function() {
-            $(".key").click(function(e){
-                WS_sendKey(e.delegateTarget.textContent)})
+            // $(".key").click(function(e){
+            //     WS_sendKey(e.delegateTarget.textContent)
+            // })
+            is_touch_device = false
+            $(".key").on('touchstart', function(event) {
+                is_touch_device = true
+                WS_sendKey(event.delegateTarget.textContent, 1)
+            });
+            $(".key").on('touchend', function(event) {
+                is_touch_device = true
+                WS_sendKey(event.delegateTarget.textContent, 2)
+            });
             
+            $(".key").on('mousedown', function(event) {
+                if (!is_touch_device){
+                    WS_sendKey(event.delegateTarget.textContent, 1)
+                }
+            });
+            $(".key").on('mouseup', function(event) {
+                if (!is_touch_device){
+                    WS_sendKey(event.delegateTarget.textContent, 2)
+                }
+            });
+
             $( "#send_btn" ).click(function() {
                 WS_connect(
                     $("#server_url")[0].value,
@@ -248,7 +278,7 @@
 
             $.custom_socket.onopen = function(e) {
                 logMsg("Send ping");
-                $.custom_socket.send('{"message": "ping", "errors": null}');
+                $.custom_socket.send('{"data": "ping", "errors": null}');
             };
 
             $.custom_socket.onmessage = function(event) {
@@ -264,14 +294,14 @@
             };
 
             $.custom_socket.onerror = function(error) {
-                logMsg(error);
+                logMsg("Ошибочка вышла...");
                 console.log(error)
             };
         }
 
-        function WS_sendKey(key) {
-            $.custom_socket.send(`{"data": {"key": "${key}", "event": 0}, "errors": null}`)
-            logMsg("Sent key: " + key)
+        function WS_sendKey(key, eventType) {
+            $.custom_socket.send(`{"data": {"key": "${key}", "event": ${eventType}}, "errors": null}`)
+            logMsg("Sent key: "+ `key: ${key}, event: ${eventType}`)
         }
     </script>
 

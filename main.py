@@ -12,6 +12,7 @@ logger = logging.getLogger(__name__)
 
 ex = {'backtick': '`', 'minus': '-', 'equals': '=', 'left-brace': '[', 'right-brace': ']', 'caps-lock': 'caps lock', 'left-shift': 'left shift', 'right-shift': 'right shift', 'left-ctrl': 'left ctrl', 'left-win': 'left windows', 'left-alt': 'left alt', 'right-alt': 'right alt', 'right-win': 'right windows'}
 
+
 async def handler(websocket):
     async for message in websocket:
         d = json.loads(message)
@@ -31,13 +32,27 @@ async def handler(websocket):
                 elif event_type == 2:
                     keyboard.release(key)
             except:
-                print(key)
-
+                await websocket.send(json.dumps({'errors': 'not valid event type'}))
+                logger.error(f'not valid event type: {key}, {event}')
+            if event == 0:
+                try:
+                    keyboard.press_and_release(key)
+                except:
+                    logger.error(key)
+            if event == 1:
+                try:
+                    keyboard.press(key)
+                except:
+                    logger.error(key)
+            if event == 2:
+                try:
+                    keyboard.release(key)
+                except:
+                    logger.error(key)
 
 async def main():
     async with serve(handler, "0.0.0.0", 8765):
         await asyncio.Future()  # run forever
 
 asyncio.run(main())
-
 
